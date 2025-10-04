@@ -17,7 +17,9 @@ export default function Home() {
           height={38}
           priority
         />
+
         <LoginBtn />
+
         {status === "authenticated" ? (
           <div className="mt-6 p-4 border rounded bg-gray-50 dark:bg-gray-800">
             <div>

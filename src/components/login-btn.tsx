@@ -17,6 +17,7 @@ export default function LoginBtn() {
         />
         Login with GitHub
       </button>
+
       <button
         onClick={() => signIn("google")}
         className="flex items-center justify-center gap-3 px-6 py-3 rounded-lg transition-colors duration-200 border-2 hover:cursor-pointer"
