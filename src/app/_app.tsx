@@ -5,7 +5,13 @@ import type { AppProps } from "next/app";
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
-}: AppProps & { Component: any }) {
+}: AppProps & {
+  Component: {
+    auth?:
+      | boolean
+      | { role: string; loading: React.ReactNode; unauthorized: string };
+  };
+}) {
   return (
     <SessionProvider session={session}>
       {Component.auth ? (

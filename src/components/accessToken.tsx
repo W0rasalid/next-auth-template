@@ -1,8 +1,8 @@
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 export default function AccessToken() {
   const { data } = useSession();
-  const accessToken = data?.accessToken;
+  const accessToken = data?.expires;
 
   return <div>Access Token: {accessToken}</div>;
 }
